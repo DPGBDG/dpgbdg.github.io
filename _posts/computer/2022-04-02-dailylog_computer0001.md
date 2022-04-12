@@ -17,10 +17,14 @@ last_modified_at: 2020-04-02
 # USB Partition Merge
 
 ## Simple Way
+- Using Windows Default Tool
+
     ```
     My PC > Right Click > Manage > Disk Management > Merge usb partition from here
     ```
 ## Harder Way (Unable to merge from disk management)
+- Using Terminal
+
     ```
     1. Window key + X
     2. Windows PowerShell
