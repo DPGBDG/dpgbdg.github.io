@@ -5,7 +5,7 @@ main:
   - title: "About Me"
     url: documents/aboutme
   - title: "Portfolio"
-    url: /categories/portfolio/
+    url: categories/portfolio
   - title: "Category"
     url: /categories/
   
