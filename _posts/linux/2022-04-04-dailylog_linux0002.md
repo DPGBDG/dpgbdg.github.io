@@ -1,11 +1,11 @@
 ---
 layout: single
-title:  "2022, April 04 - Basic Computer Tips - Network Adapter Driver Fix (TL-WN722N)"
+title:  "Linux (02) - Network Adapter Driver Fix (TL-WN722N)"
 
 categories:
     - Linux
 tags:
-    - [Linux, Solution]
+    - [Linux, Issue]
 
 toc: true
 toc_sticky: true

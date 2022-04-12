@@ -1,10 +1,10 @@
 ---
 layout: single
-title:  "2022, March 29 - Cyber Security Boot Camp - Command Line (001)"
+title:  "Linux (01) - Basic Linux Commands"
 categories:
     - Linux
 tags:
-    - [Linux, Command, Basic, Tips]
+    - [Linux, Command, Syntax]
 
 toc: true
 toc_sticky: true
@@ -76,7 +76,8 @@ Format = Command Option File/Name
 - cd - Change Directory
     ```
     cd
-    cd ..   Go to previous folder
+    cd ..   Go to previous folder  
+            (. = current folder,  .. = Parent of current folder)
     ```
 
 - ls - List Files

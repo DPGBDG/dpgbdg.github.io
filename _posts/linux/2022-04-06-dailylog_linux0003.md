@@ -1,11 +1,11 @@
 ---
 layout: single
-title:  "2022, April 06 - Basic Computer Tips - Parrot OS Network ID Issue"
+title:  "Linux (03) - Parrot OS Network ID Issue"
 
 categories:
     - Linux
 tags:
-    - [Linux, Solution]
+    - [Linux, Issue]
 
 toc: true
 toc_sticky: true

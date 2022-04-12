@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "2022, April 02 - Basic Computer Tips - USB Partition Error"
+title:  "Computer Usage Tips (01) - USB Partition Error"
 
 categories:
     - Computer
