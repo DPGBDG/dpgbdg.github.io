@@ -18,9 +18,8 @@ last_modified_at: 2020-04-04
 - Monitor Mode & Packet Injection Enable
 - TL-WN722N V1 enables both mode by default
 - V2/V3 Needs special driver to enable those features
----
-<br>
 
+## Install
 - Install New Driver (driver downloaded & saved on local computer as well)
     ```
     Kali (2022.1) /Parrot (4.11.3) Confirmed
@@ -53,7 +52,7 @@ last_modified_at: 2020-04-04
     sudo modprobe 8188eu
     ```
 
-
+## Check
 - Enable monitor mode and test packet injection (Internet Disable)
     ```
     sudo ifconfig wlan0 down

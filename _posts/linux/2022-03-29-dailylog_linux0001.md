@@ -15,21 +15,17 @@ last_modified_at: 2020-03-29
 
 # Basic of Command Line 
 
-Files and Directories
+## Files and Directories
 
 - File - Document that stores information such as text, images, video.  
 - Directory - File that stores the names of other files or directories in a hierarchical st.
-<br>
 
-Why command line?
+## Why command line?
 - Some machine only allows command line (No Graphical UI)
 - Very efficient and faster  
-###### On Mac = Terminal // On Window = Git Bash (CMD is not Command Line)
-<br>
+- On Mac = Terminal // On Window = Git Bash (CMD is not Command Line)
 
-Command Line Basic Syntax 
-<br> 
-
+## Command Line Basic Syntax
 Format = Command Option File/Name  
 (ex: mkdir -p temp)  
 

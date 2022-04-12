@@ -16,6 +16,7 @@ last_modified_at: 2020-03-26
 
 # Basic of Markdown
 
+## Why Markdown?
 - Markdown = Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents (.md file)
 - Markdown text editor 
     1. Stack Edit (Free/Online)
@@ -24,6 +25,7 @@ last_modified_at: 2020-03-26
         - Install plugins (markdownlint & markdown all in one)
         - Preview Ctrl + Shift + v
 
+## Markdown Syntax
 - Markdown Basic Syntax  
   Detail on <https://ansohxxn.github.io/blog/markdown/>
     - Change Line
@@ -78,13 +80,19 @@ last_modified_at: 2020-03-26
     <span style="color:yellow">text</span>>
     ```
 
-    - Code Block 
-    ```
-    \```
-    code
-    \```
-    ```
+    - Code Block  
+    \`\`\`  
+    code  
+    \`\`\`
 
+    - Commenting "Liquid Language" without executing  
+    \`\`\`  
+    {퍼센트 raw 퍼센트}  
+    Liquid Syntax  
+    {퍼센트 endraw 퍼센트}  
+    \`\`\`
+
+    
     - Insert Image
     ```
     ![image](url)

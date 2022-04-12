@@ -15,16 +15,25 @@ date: 2022-04-08
 last_modified_at: 2020-04-08
 ---
 
+
 # Linux USB Install Problem
-- Bootable live USB
-    1) Live USB - Fast, Read Only, Unable to save any data, resets every time restart
+
+## Bootable live USB
+- Type of Live USB  
+  
+    1) Live USB - Fast, Read Only, Unable to save any data, resets every time restart  
     2) Live USB (Persistence Mode) - Require persistence memory when creating live usb, Slow (Require Fast Read/Write USB Memory stick), Data can be saved.
-- Full Installation on USB/SSD
-    1) extra bootable USB required
-    2) Fast Read/Write USB/SSD required
-    3) GRUB can cause some issues (Booting order should change after installation)
-    4) Must install GRUB on Memory Stick (USB/SSD)
-    5) Memory stick partition should be created
+
+
+## Full Installation on USB/SSD 
+- Instruction  
+  
+    1) extra bootable USB required  
+    2) Fast Read/Write USB/SSD required  
+    3) GRUB can cause some issues (Booting order should change after installation)  
+    4) Must install GRUB on Memory Stick (USB/SSD)  
+    5) Memory stick partition should be created  
+   
         ```
         Partition 1 (Main) (/dev/sda/)
         Ubuntu Installation Example
@@ -41,7 +50,10 @@ last_modified_at: 2020-04-08
         Location for the new partition = Beginning of this space
         Use as = swap area
         ```
-- Delete Linux and Boot loader
+
+## Delete Linux and Boot loader
+- Instruction  
+  
     1. Delete Linux volume from disk
         ```
         Computer Management > Disk Management > Delete Linux volume
@@ -63,17 +75,19 @@ last_modified_at: 2020-04-08
             dir                 (Check folder deleted)
             exit                (reboot)
                                 (Check Boot Loader)
-            ```
+        ```
 
----
-- Window boot manager is deleted
+
+# Issue
+## Window boot manager is deleted
+- Unable to boot using default window booting menu    
     ```
     Install Window boot manager, by using attached program (bootice_v1.3.4.0.exe)
     Start bootice_v1.3.4.0.exe
-    Physical disk tab > Destination Disk (Window Installed Disk) > Process MBR > 
-    Windows NT 5.x / 6.x MBR (Window 10 up = 6.x) > Install / Config
-
-- Delete Boot Loader using "bootice"
+    Physical disk tab > Destination Disk (Window Installed Disk) > Process MBR > Windows NT 5.x / 6.x MBR (Window 10 up = 6.x) > Install / Config
+    ```
+## Delete Boot Loader using "bootice"
+- Deleting Boot menu using 3rd party program
     ```
     Start bootice_v1.3.4.0.exe
     UEFI > Edit Boot Entries > Delete boot menu

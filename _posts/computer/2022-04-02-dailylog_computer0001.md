@@ -16,11 +16,11 @@ last_modified_at: 2020-04-02
 
 # USB Partition Merge
 
-- Simple Way
+## Simple Way
     ```
     My PC > Right Click > Manage > Disk Management > Merge usb partition from here
     ```
-- Harder Way (Unable to merge from disk management)
+## Harder Way (Unable to merge from disk management)
     ```
     1. Window key + X
     2. Windows PowerShell
