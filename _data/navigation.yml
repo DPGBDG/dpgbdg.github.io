@@ -2,8 +2,14 @@
 main:
   - title: "Home"
     url: /index.html
+  - title: "About Me"
+    url: documents/aboutme
+  - title: "Portfolio"
+    url: /categories/portfolio/
   - title: "Category"
     url: /categories/
+  
+  
   # - title: "Quick-Start Guide"
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "About"
