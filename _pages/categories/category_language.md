@@ -8,4 +8,6 @@ sidebar_main: true
 
 
 {% assign posts = site.categories.Language %}
-{% for post in posts %} {% include archive-single_simple.html type=page.entries_layout %} {% endfor %}
+{% for post in posts reversed %} 
+    {% include archive-single_simple.html type=page.entries_layout %} 
+{% endfor %}
