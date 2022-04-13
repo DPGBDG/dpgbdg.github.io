@@ -1,7 +1,7 @@
 ---
 layout: single
 
-title:  "Linux (04) -  Linux Full Installation On USB"
+title:  "Linux (05) -  Linux Full Installation On USB"
 
 categories:
     - Linux

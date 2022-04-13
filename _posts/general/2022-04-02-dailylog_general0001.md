@@ -1,11 +1,11 @@
 ---
 layout: single
-title:  "Computer Usage Tips (01) - USB Partition Error"
+title:  "Basic System Usage Tips (01) - USB Partition Error"
 
 categories:
-    - Computer
+    - General
 tags:
-    - [Computer, Basic, Tips]
+    - [General, Basic, Tips]
 
 toc: true
 toc_sticky: true

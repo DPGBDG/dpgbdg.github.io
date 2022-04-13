@@ -1,11 +1,11 @@
 ---
 layout: single
-title:  "Computer Usage Tips (02) - Github & VS Code connection"
+title:  "Basic System Usage Tips (02) - Github & VS Code connection"
 
 categories:
-    - Computer
+    - General
 tags:
-    - [Computer, Basic, Tips, Github, VS Code]
+    - [General, Basic, Tips, Github, VS Code]
 
 toc: true
 toc_sticky: true

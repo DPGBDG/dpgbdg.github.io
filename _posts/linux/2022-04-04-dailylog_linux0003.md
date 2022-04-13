@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Linux (02) - Network Adapter Driver Fix (TL-WN722N)"
+title:  "Linux (03) - Network Adapter Driver Fix (TL-WN722N)"
 
 categories:
     - Linux

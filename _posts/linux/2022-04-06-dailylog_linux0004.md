@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Linux (03) - Parrot OS Network ID Issue"
+title:  "Linux (04) - Parrot OS Network ID Issue"
 
 categories:
     - Linux

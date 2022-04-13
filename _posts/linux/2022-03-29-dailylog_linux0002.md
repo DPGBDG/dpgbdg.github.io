@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Linux (01) - Basic Linux Commands"
+title:  "Linux (02) - Basic Linux Commands"
 categories:
     - Linux
 tags:
@@ -20,10 +20,6 @@ last_modified_at: 2020-03-29
 - File - Document that stores information such as text, images, video.  
 - Directory - File that stores the names of other files or directories in a hierarchical st.
 
-## Why command line?
-- Some machine only allows command line (No Graphical UI)
-- Very efficient and faster  
-- On Mac = Terminal // On Window = Git Bash (CMD is not Command Line)
 
 ## Command Line Basic Syntax
 Format = Command Option File/Name  
@@ -64,16 +60,24 @@ Format = Command Option File/Name
     mkdir -p "folder 6"/"folder 7"
     ```
 
+- whoami - Print User Name
+    ```
+    whoami
+    ```
+
 - pwd - Print Working Directory
     ```
     pwd
     ```
 
-- cd - Change Directory
+- cd - Change Directory ("/" = Directory seperator | root folder)
     ```
-    cd
-    cd ..   Go to previous folder  
-            (. = current folder,  .. = Parent of current folder)
+    cd          Go to root folder
+    cd /        Go to home folder
+    cd ../..    Go to previous folder x 2
+    cd ~/       Starting from home directory
+    cd ..       Go to previous folder  
+                ( . = current folder,  .. = Parent of current folder)
     ```
 
 - ls - List Files
