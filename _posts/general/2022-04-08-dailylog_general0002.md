@@ -27,4 +27,4 @@ last_modified_at: 2020-04-08
 - Commit
 1. "Source Control" on left side tab
 2. Type message and press check mark
-   If error occurred, try refresh on bottom 
+   If error occurred, try refresh on bottom
