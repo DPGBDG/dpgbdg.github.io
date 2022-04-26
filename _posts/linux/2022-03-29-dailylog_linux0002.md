@@ -10,7 +10,7 @@ toc: true
 toc_sticky: true
 
 date: 2022-03-29
-last_modified_at: 2020-03-29
+last_modified_at: 2020-04-26
 ---
 
 # Basic of Command Line 
@@ -22,42 +22,61 @@ last_modified_at: 2020-03-29
 
 
 ## Command Line Basic Syntax
-Format = Command Option File/Name  
-(ex: mkdir -p temp)  
+- Format = Command Option File/Name  
+    (ex: mkdir -p temp)  
+- Command line alphabet case rule = Command line is Case-Insensitive.  
+    (ex: /Document != /document)
 
-- Command line alphabet case rule - Command line is Case-Insensitive.
+### Basic Term & Command & Rule
+- Superuser (root) - Linux Administartor Account = Ability to change and control system
     ```
-    echo "Lower case" > a.txt       file created
-    echo "Upper case" > A.TXT       New file created, above file deleted
-    echo "Mixed case" > A.txt       New file created, above file deleted
+    sudo su         Change to Super user    =   Superuser / Switch User
+    ctrl + d        Logout from the current account
+    sudo apt-get    APT package installing with SuperUser account    
     ```
 
-- mkdir - make folder
-    ``` 
-    mkdir MyFolder
-    mkdir /tmp/tutorial     Creating folder with location 
-                            (Error occurs if /tmp does not exist
-    mkdir dir1 dir2 dir3    Create Multiple Folder
-    mkdir -p dir4/dir5/dir6 Create folder inside folder
-                            Dir4 > Dir5 > Dir6
-                            mkdir -p = Create the parent directories
+- STDIN - Standard Input    = Feeding it directly in as the input to another command
+
+- STDOUT - Standard Output  = Taking the output from one command
+
+- PPA - Personal Package Archive
+
+- Pipe - " | "              = Connecting 2 command in one line (Operates in memory), (Space around pipe can be ignored)
     ```
+    ls ~ | wc -l                            It will count Files/Directories on Home folder
+    cat combined.txt | sort -u | wc -l      It will sort out repeated line and count from combined.txt
+    or
+    cat combined.txt | uniq | wc -l         (Same as above)
     ```
-    Same Command / Different Method
-    (Verbose = Provide additional detail about what command doing)
-    mkdir --parents --verbose dir4/dir5
-    mkdir -p --verbose dir4/dir5
-    mkdir -p -v dir4/dir5
-    mkdir -pv dir4/dir5
+
+- Hidden File - Hidden file = Can be setup by putting dot (.) in front of file name. (File are still accessible, it's just hidden)
     ```
+    mv important.txt .important.txt
+    mkdir .hidden
     ```
-    Same Command / Different Method
-    Insert "Space" as folder name
-    mkdir "folder 1"
-    mkdir 'folder 2'
-    mkdir folder\ 3
-    mkdir "folder 4" "folder 5"
-    mkdir -p "folder 6"/"folder 7"
+
+- Globbing - Special character to specify letter,character,number,location,etc
+    ```
+    /       Separator = Separate folders 
+            ex) home/temp/test.txt
+    *       Single Asterisk = Match zero or more character within "one segment"
+            ex) *.js = HelloWorld.js
+    **      Double Astorisk = Zero or more character across "multiple segments"
+            ex) **/*.js = HelloWorld.js , /UI/Hello.js , test/midterm.js
+    ?       Question Mark = Single character within one segment
+            ex) temp_?.txt = temp_1.txt , temp_2.txt
+    [abc]   Square Braket = File with a single character mentioned in the braket
+            ex) [CB]at.js = Cat.js , Bat.js
+    [a-z]   Square Braket Range = Matches one character specified in the range
+            temp[1=9]/helloworld.js = temp1/helloworld.js, temp3/helloworld.js
+    !       Negation    = Excluding
+            ex) [!C]at.js = Bat.js
+            ex) !Tests/UI/** = exclude all files and folder on Tests/UI/ folder
+
+### Information
+- man - Manual page of command
+    ```
+    man sort
     ```
 
 - whoami - Print User Name
@@ -70,6 +89,36 @@ Format = Command Option File/Name
     pwd
     ```
 
+- ls - List Files
+    ```
+    ls                      List Files/Folders on Current folder
+    la -a                   List All Files/Folders, including hidden
+    ls > output.txt         Creating file using ls
+    ls ~ > file_list.txt    Make a file_list.txt and list home directory files/folders in the file
+    ```
+
+- wc - Word Count
+    ```
+    wc combined.txt         Count on combined.txt file (Line / Word / Character)
+    wc -l combined.txt      Only Count Lines
+    wc -w combined.txt      Only Count Words
+    wc -c combined.txt      Only Count Characters
+    ```
+    ```
+    Quick Tip: Checking Number of files and folders on Home folder (can be any folder)
+    ls ~ > list.txt
+    wc -l list.txt
+    ```
+
+- sort - sort information
+    ```
+    sort a.txt          Sort Alphabetical order
+    sort -u a.txt       Filter out repeated lines or letter
+    sort -r a.txt       Filter reverse
+
+
+
+### Location
 - cd - Change Directory ("/" = Directory seperator | root folder)
     ```
     cd          Go to root folder
@@ -80,22 +129,75 @@ Format = Command Option File/Name
                 ( . = current folder,  .. = Parent of current folder)
     ```
 
-- ls - List Files
+### File/Folder Management
+- mkdir - make folder
+    ``` 
+    mkdir MyFolder
+    mkdir /tmp/tutorial     Creating folder with location 
+                            (Error occurs if /tmp does not exist
+    mkdir dir0 dir2 dir3    Create Multiple Folder
+    mkdir -p dir3/dir5/dir6 Create folder inside folder
+                            Dir3 > Dir5 > Dir6
+                            mkdir -p = Create the parent directories
     ```
-    ls
-    Creating file using ls
-    ls > output.txt
+    ```
+    Same Command / Different Method
+    (Verbose = Provide additional detail about what command doing)
+    mkdir --parents --verbose dir3/dir5
+    mkdir -p --verbose dir3/dir5
+    mkdir -p -v dir3/dir5
+    mkdir -pv dir3/dir5
+    ```
+    ```
+    Same Command / Different Method
+    Insert "Space" as folder name
+    mkdir "folder 0"
+    mkdir 'folder 1'
+    mkdir folder\ 2
+    mkdir "folder 3" "folder 5"
+    mkdir -p "folder 5"/"folder 7"
+    ```
+- mv - Move one or more files or directories from one place to another ina file system
+    ```
+    mv README.txt Documents/                    Move README.txt file to "Document" folder
+    mv ./* ..                                   Move all file to parent folder (previous folder)
+    mv combined.txt test_* dir3 dir2            Move all test_# files and combined.txt and "dir3" folder into "dir2" folder
+                                                (It move everything to last location)
+    mv dir2/combined.txt dir4/dir5.dir6         Move combined.txt from "dir2" folder to dir4 > dir5 > dir6 folder
+    mv backup_combined.txt combined_backup.txt  Rename backup_combined.txt to combined_backup.txt
+    mv "folder 1" folder_1                      Rename "folder 1" to folder_1
     ```
 
-- rm - Delete Files
+- cp - Copy
+    ```
+    cp test1.txt test2.txt                      Copy and make test1.txt file to test2.txt
+    cp dir4/dir5/dir6/combined.txt .            Copy combined.txt on same folder
+    cp combined.txt backup_combined.txt         Copy combined.txt and make backup_combined.txt file
+    ```
+
+- rmdir - Remove Directory (Unable to recover after delete)
+    ```
+    rmdir folder_1                  Delete folder_1 (Folder must be empty)
+    rmdir -p dir1/dir2/dir3         Delete Dir3 > Dir2 > Dir1
+    rmdir -r folder3                Delete (Force) all file and directory
+    ```
+
+- rm - Delete Files (Unable to recover after delete)
     ```
     rm temp.txt     Delete file
     rm -r temp      Delete file & directories
     ```
 
+
+### Read/Write
 - touch - Create file without any content
     ```
     touch README.txt
+    ```
+
+- tail - Output end of the file
+    ```
+    tail -5 doc.txt         Display last 5 lines from doc.txt
     ```
 
 - echo - Outputs the strings that are passed to it as arguments
@@ -105,6 +207,11 @@ Format = Command Option File/Name
     echo "This is a second test" > test_2.txt
     echo "This is a third test" > test_3.txt
     ```
+    ```
+    echo "Lower case" > a.txt       file created
+    echo "Upper case" > A.TXT       New file created, above file deleted
+    echo "Mixed case" > A.txt       New file created, above file deleted
+    ```
 
 - cat - Create/Read single or multiple files (Concatenate)
     ```
@@ -113,8 +220,8 @@ Format = Command Option File/Name
     ```
     ```
     Using Wildcard
-    cat test_?.txt      ? = any character (? = 1 character)    
-    cat test_*          * = any character, text, letter // Include all
+    cat test_?.txt          ? = any character (? = 1 character)    
+    cat test_*              * = any character, text, letter // Include all
     ```
     ```
     Combining context
@@ -139,9 +246,4 @@ Format = Command Option File/Name
 - less - View the contents of a text file one screen at a time
     ```
     less combined.txt
-    ```
-
-- mv - Move one or more files or directories from one place to another ina file system
-    ```
-    mv README.txt Documents/
     ```
