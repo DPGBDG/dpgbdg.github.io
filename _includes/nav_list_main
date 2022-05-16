@@ -19,6 +19,13 @@
                         <li><a href="/categories/portfolio" class="">Portfolio ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
+            </ul> 
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "ETC" %}
+                        <li><a href="/categories/etc" class="">ETC ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
             </ul>
         <span class="nav__sub-title">Study</span>
             <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
