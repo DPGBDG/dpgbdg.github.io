@@ -27,6 +27,7 @@ last_modified_at: 2020-04-26
 - Command line alphabet case rule = Command line is Case-Insensitive.  
     (ex: /Document != /document)
 
+
 ### Basic Term & Command & Rule
 - Superuser (root) - Linux Administartor Account = Ability to change and control system
     ```
@@ -54,8 +55,8 @@ last_modified_at: 2020-04-26
     mv important.txt .important.txt
     mkdir .hidden
     ```
-
-- Globbing - Special character to specify letter,character,number,location,etc
+- Globbing - Special character to specify letter,character,number,location,etc  
+    (https://linuxhint.com/bash_globbing_tutorial/)
     ```
     /       Separator = Separate folders 
             ex) home/temp/test.txt
@@ -65,13 +66,19 @@ last_modified_at: 2020-04-26
             ex) **/*.js = HelloWorld.js , /UI/Hello.js , test/midterm.js
     ?       Question Mark = Single character within one segment
             ex) temp_?.txt = temp_1.txt , temp_2.txt
-    [abc]   Square Braket = File with a single character mentioned in the braket
+    [abc]   Square Bracket = File with a single character mentioned in the braket
             ex) [CB]at.js = Cat.js , Bat.js
     [a-z]   Square Braket Range = Matches one character specified in the range
             temp[1=9]/helloworld.js = temp1/helloworld.js, temp3/helloworld.js
+    [1-9]   Square Bracket = Number from 1~9
     !       Negation    = Excluding
             ex) [!C]at.js = Bat.js
             ex) !Tests/UI/** = exclude all files and folder on Tests/UI/ folder
+    ^       Caret = define globbing pattern more specifically. 
+            outside of square bracket = search those contents of the file that starts with a given range of character
+            inside of square bracket = show all content of the file by highlighting the lines start with a given range of character
+    ```
+
 
 ### Information
 - man - Manual page of command
@@ -110,13 +117,29 @@ last_modified_at: 2020-04-26
     wc -l list.txt
     ```
 
+
+### Search
 - sort - sort information
     ```
     sort a.txt          Sort Alphabetical order
     sort -u a.txt       Filter out repeated lines or letter
     sort -r a.txt       Filter reverse
+    ```
 
+- grep - Global Regular Expression Print - Searching string of characters in a specified file.  
+    (https://recipes4dev.tistory.com/157)
+    ```
+    grep [option] [pattern] [file]
+    grep lion test      Find "lion" Character from test
+    ```
 
+- find - Search for files and directories in a directory  
+    (https://recipes4dev.tistory.com/156)
+    ```
+    find [option] [path] [expression] [filename]
+    find . -name cat        Find "cat" file from current directory
+    find /c/usr/temp cat    Find "cat" file from /c/usr/temp directory   
+    ```
 
 ### Location
 - cd - Change Directory ("/" = Directory seperator | root folder)
@@ -128,6 +151,7 @@ last_modified_at: 2020-04-26
     cd ..       Go to previous folder  
                 ( . = current folder,  .. = Parent of current folder)
     ```
+
 
 ### File/Folder Management
 - mkdir - make folder
