@@ -76,7 +76,7 @@ last_modified_at: 2020-05-16
             ex) !Tests/UI/** = exclude all files and folder on Tests/UI/ folder
     ^       Caret = define globbing pattern more specifically. 
             outside of square bracket = search those contents of the file that starts with a given range of character
-            inside of square bracket = show all content of the file by highlighting the lines start with a given range of character
+            inside of square bracket = show all content of the file by highlighting the lines start with a given range of character    
     ```
 
 
