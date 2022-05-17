@@ -205,4 +205,4 @@ last_modified_at: 2020-05-17
     ```
 
 ---
-( Source: https://inpa.tistory.com/entry/LINUX-%F0%9F%93%9A-%EC%89%98-%ED%8A%B9%EC%88%98%EB%AC%B8%EC%9E%90-%EA%B8%B0%ED%98%B8-%EC%82%AC%EC%9A%A9-%EC%A0%95%EB%A6%AC-%EC%99%80%EC%9D%BC%EB%93%9C%EC%B9%B4%EB%93%9C-%EC%9D%B8%EC%9A%A9%EB%B6%80%ED%98%B8-%EB%8B%A4%EC%A4%91%EB%AA%85%EB%A0%B9%EC%96%B4-%EB%94%B0%EC%98%B4%ED%91%9C )
+###### ( Source: https://inpa.tistory.com/category )
