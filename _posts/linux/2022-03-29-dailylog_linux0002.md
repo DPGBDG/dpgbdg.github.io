@@ -10,7 +10,7 @@ toc: true
 toc_sticky: true
 
 date: 2022-03-29
-last_modified_at: 2020-04-26
+last_modified_at: 2020-05-16
 ---
 
 # Basic of Command Line 
