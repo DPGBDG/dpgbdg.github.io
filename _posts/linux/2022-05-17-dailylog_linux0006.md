@@ -10,7 +10,7 @@ toc: true
 toc_sticky: true
 
 date: 2022-05-17
-last_modified_at: 2020-05-17
+last_modified_at: 2020-05-18
 ---
 
 # Linux Special Character Symbol Meaning In Command Line

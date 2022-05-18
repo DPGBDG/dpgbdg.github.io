@@ -10,7 +10,7 @@ toc: true
 toc_sticky: true
 
 date: 2022-03-29
-last_modified_at: 2020-05-16
+last_modified_at: 2020-05-18
 ---
 
 # Basic of Command Line 
@@ -63,28 +63,37 @@ last_modified_at: 2020-05-16
     mv important.txt .important.txt
     mkdir .hidden
     ```
+
 - Globbing - Special character to specify letter,character,number,location,etc  
     (https://linuxhint.com/bash_globbing_tutorial/)
     ```
     /       Separator = Separate folders 
             ex) home/temp/test.txt
+    
     *       Single Asterisk = Match zero or more character within "one segment"
             ex) *.js = HelloWorld.js
+    
     **      Double Astorisk = Zero or more character across "multiple segments"
             ex) **/*.js = HelloWorld.js , /UI/Hello.js , test/midterm.js
+    
     ?       Question Mark = Single character within one segment
             ex) temp_?.txt = temp_1.txt , temp_2.txt
+    
     [abc]   Square Bracket = File with a single character mentioned in the braket
             ex) [CB]at.js = Cat.js , Bat.js
+    
     [a-z]   Square Braket Range = Matches one character specified in the range
             temp[1=9]/helloworld.js = temp1/helloworld.js, temp3/helloworld.js
+    
     [1-9]   Square Bracket = Number from 1~9
+    
     !       Negation    = Excluding
             ex) [!C]at.js = Bat.js
             ex) !Tests/UI/** = exclude all files and folder on Tests/UI/ folder
+    
     ^       Caret = define globbing pattern more specifically. 
             outside of square bracket = search those contents of the file that starts with a given range of character
-            inside of square bracket = show all content of the file by highlighting the lines start with a given range of character    
+            inside of square bracket = show all content of the file by highlighting the lines start with a given range of character
     ```
 
 
