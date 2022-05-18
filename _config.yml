@@ -106,7 +106,7 @@ author:
   avatar           : "https://user-images.githubusercontent.com/102259339/162590004-0190ebc5-2a8b-4196-8e46-c9fe0f614936.jpg"
   bio              : "Let it be"
   location         : "Canada"
-  email            : "test@gm.com"
+  email            : #"test@gm.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
