@@ -80,7 +80,7 @@ last_modified_at: 2020-05-17
 
 
 ## Multiple Command
--   |   =   Connect left and right side of command (Path output of left command to right side command)
+-   |   =   Connect left and right side of command (Pass output of left command to right side command)
     ```
     cat /etc/passwd | grep bash | sort      Organize only bash files from passwd folder
     ```

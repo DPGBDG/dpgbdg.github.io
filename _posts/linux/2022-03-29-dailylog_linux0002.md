@@ -50,6 +50,14 @@ last_modified_at: 2020-05-16
     cat combined.txt | uniq | wc -l         (Same as above)
     ```
 
+- xargs - Receive outcome of first (left) argument and pass to right side of argument. (Xargs and | (Pipe) is DIFFERENT)  
+            - pipe = pass "outcome" of first argument (pass as-is) (결과)  
+            - xargs = pass "value" of first argument (pass inside??) (값)
+    ```
+    find -name "output.txt" | grep "qa"         output.txt file will be pass to second argument
+    find -name "output.txt" | xargs grep "qa"   value of output.txt file will be pass to second argument
+    ```
+
 - Hidden File - Hidden file = Can be setup by putting dot (.) in front of file name. (File are still accessible, it's just hidden)
     ```
     mv important.txt .important.txt
@@ -139,6 +147,19 @@ last_modified_at: 2020-05-16
     find [option] [path] [expression] [filename]
     find . -name cat        Find "cat" file from current directory
     find /c/usr/temp cat    Find "cat" file from /c/usr/temp directory   
+    ```
+
+- seq - Generate numbers from first to last in steps of increment  
+    (https://www.geeksforgeeks.org/seq-command-in-linux-with-examples/)
+    ```
+    seq [option] last_number
+    seq 10      Outcome = 1 2 3 4 5 6 7 8 9 10
+    
+    seq [option] first_number last_number
+    seq 3 7     Outcome = 3 4 5 6 7
+
+    seq [option] first_number increment last_number
+    seq 3 3 15  Outcome = 3 6 9 12 15
     ```
 
 ### Location
